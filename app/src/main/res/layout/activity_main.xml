@@ -1,297 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:orientation="vertical">
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/location_pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <EditText
+        android:id="@+id/editText1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="enter"
-        android:textColor="@color/white">
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/rounded_edges"
+        android:drawableStart="@drawable/phone"
+        android:hint=" Phone Number"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="@color/orange"
+        android:textColorHint="@color/orange"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"></EditText>
 
-    </EditText>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/editText2"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edges"
+        android:drawableStart="@drawable/lock"
+        android:hint=" Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/orange"
+        android:textColorHint="@color/orange"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText1"></EditText>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="177dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:buttonTint="@color/orange"
+        android:text="Remember me"
+        android:textColor="@color/grey"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"></CheckBox>
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:background="@android:color/transparent"
+        android:text="Forget Password ?"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"></Button>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/rounded_edges"
+        android:backgroundTint="@color/orange"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.194"></Button>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/light_grey"
-                android:text="%"
-                android:textSize="30dp">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textFontWeight="900"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"></Button>
 
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="7"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="4"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="1"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="C"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/light_grey"
-                android:text="("
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="8"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="5"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="2"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/light_grey"
-                android:text=")"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="9"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="6"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="3"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/grey"
-                android:text="."
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/orange"
-                android:text="+/-"
-                android:textColor="@color/white"
-                android:textSize="25dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/orange"
-                android:text="*"
-                android:textColor="@color/white"
-                android:textSize="28dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/orange"
-                android:text="/"
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_weight="3"
-                android:background="@drawable/rounded_edges"
-                android:backgroundTint="@color/orange"
-                android:text="="
-                android:textColor="@color/white"
-                android:textSize="30dp">
-
-            </Button>
-
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
